@@ -1,20 +1,30 @@
 let up = document.querySelector(".app");
-
+let chnge = []
 fetch("https://63c79ecb5c0760f69aba8ab0.mockapi.io/veg")
     .then((res) => {
         return res.json()
     })
     .then((data) => {
         console.log(data)
+        chnge = data
         display(data)
     })
 let count = 0;
+
+let itemNo = document.querySelector("#item");
+
 let q = 1;
+
+
+let big = JSON.parse(localStorage.getItem("bigcart")) || [];
+
 function display(data) {
     up.innerHTML = "";
     data.forEach((element) => {
         let cont = document.createElement("div")
         // let count = 0;
+
+        let it = document.createElement("span")
         let card = document.createElement("div");
         let get = document.createElement("div");
         let img = document.createElement("img");
@@ -28,16 +38,18 @@ function display(data) {
         let discMrp = document.createElement("h5");
         let inc = document.createElement("button");
         inc.innerText = "+";
-        let qty = document.createElement("textarea")
-        qty.innerText = Number(1);
+        let qty = document.createElement("input")
+        qty.value = Number(1);
         let dec = document.createElement("button");
         dec.innerText = "-";
         let add = document.createElement("button");
-        let r = ((Math.random() * 100) / 1) / 10;
+        // let r = ((Math.random() * 100) / 1) / 10;
+        let r = Math.floor(Math.random() * 10)
         get.innerText = `GET ${r}% OFF`;
         get.className = "off"
 
         img.setAttribute("src", element[count].Productimage);
+
         vegSymbol.src = "./veg.png";
 
 
@@ -46,12 +58,24 @@ function display(data) {
         starRating.innerText = element[count].star + " ⭐ " + element[count].ratings + " ratings";
         weight.innerText = element[count].quantity + " " + element[count].Type;
         // ...div to be attached with mrp ection
-        // let strike = document.createElement("strike");
-        cross.innerHTML = "MRP" + ` ${element[count].prevPrice}` + ` Rs${element[count].DiscPrize}`;
+        let d = document.createElement("p");
+        d.innerText = element[count].prevPrice;
+        d.className = "cr"
+
+        // ` ${element[count].prevPrice}`
+        if (element[count].prevPrice == undefined) {
+            cross.innerHTML = "MRP " + 70
+        } else if (element[count].DiscPrize == undefined) {
+            cross.innerHTML = "MRP " + d.innerText + "Rs 62";
+        } else {
+            cross.innerHTML = "MRP " + d.innerText
+        }
+
+
         inc.addEventListener("click", function () {
             count++;
             q++;
-            qty.innerText = q
+            qty.value = q
 
             localStorage.setItem("bigcart", JSON.stringify(Cartitem))
             display(data)
@@ -60,7 +84,7 @@ function display(data) {
             if (q > 1) {
                 q--;
             }
-            qty.innerText = q;
+            qty.value = q;
             localStorage.setItem("bigcart", JSON.stringify(Cartitem))
             display(data)
 
@@ -88,15 +112,67 @@ function display(data) {
         cross.className = "mrp";
         qty.className = "qty";
         add.className = "addbtn";
+        add.innerText = "Add 🧺";
+        itemNo.innerText = '';
+        it.innerText = big.length;
+        add.addEventListener("click", function () {
+
+
+            // console.log(element[count])
+            big.push(element[count])
+            localStorage.setItem("bigcart", JSON.stringify(big));
+            if (qty.value == 1) {
+                it.innerText = big.length
+            } else {
+                it.innerText = Number(big.length) + Number(qty.value)
+            }
+
+
+        })
         card.className = "product-card"
+        vegSymbol.className = "Veg"
+        img.className = "product-img"
         mrpdiv.append(cross, dec, qty, inc, add)
         card.append(get, vegSymbol, img, comp, title, starRating, weight, mrpdiv)
         cont.append(card);
+        itemNo.append(it)
         up.append(cont)
 
 
     });
 }
+
+let leftarrow = document.querySelector(".arrowq");
+let rightarrow = document.querySelector(".arroww");
+
+leftarrow.addEventListener("click", function () {
+    if (count > 0) {
+        count--;
+    }
+
+    // console.log(count)
+
+    return display(chnge);
+
+})
+rightarrow.addEventListener("click", function () {
+
+    // console.log(count)
+    count++
+    if (count == chnge.length) {
+        count = 0;
+    }
+    display(chnge);
+})
+
+
+
+
+// sliding Image-------------------------------------------------
+
+
+
+
 let slideArr = ["https://www.bigbasket.com/media/customPage/af8a6915-a79e-4f18-8ca0-bd83165b0846/9b50f224-b14c-4d87-aabd-9a0cce5f5042/5e469fa8-b795-4b40-b684-318a5e235528/t4_DT_hp_m_hds_Nagp_400_261222.jpg",
     "https://www.bigbasket.com/media/customPage/af8a6915-a79e-4f18-8ca0-bd83165b0846/9b50f224-b14c-4d87-aabd-9a0cce5f5042/5e469fa8-b795-4b40-b684-318a5e235528/t4_DT_hp_m_fav-winter-delicates_Nagp_400_261222.jpg",
     "https://www.bigbasket.com/media/customPage/af8a6915-a79e-4f18-8ca0-bd83165b0846/9b50f224-b14c-4d87-aabd-9a0cce5f5042/5e469fa8-b795-4b40-b684-318a5e235528/t4_DT_hp_m_winter-nourishment%20_Nagp_400_261222.jpg",

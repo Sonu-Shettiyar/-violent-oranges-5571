@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    /* padding: ; */
+}
+
+.main {
+    border: 2px solid rgba(235, 227, 227, 0.46);
+    /* display: block; */
+    width: 400px;
+    margin: auto;
+    padding-left: 70px;
+
+    /* margin-top: 40px; */
+}
+
+div:first-child {
+    /* background-color: #84c225;
+    background-image: linear-gradient(rgb(23, 148, 23), rgba(33, 18, 18, 0.924), rgb(226, 204, 78), black);
+    color: whitesmoke; */
+    color: #84c225;
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+
+    /* margin: auto; */
+    height: 70px;
+
+    /* margin-top: 0; */
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 10px;
+
+
+}
+
+form>label {
+    font-size: large;
+    font-size: 23px;
+    text-shadow: 40px;
+    margin-top: 20px;
+    color: #84c225;
+}
+
+form>input {
+    margin-top: 13px;
+    border: none;
+    padding-left: 10px;
+    height: 50px;
+    /* text-align: 20px; */
+    border-bottom: 9px solid grey;
+}
+
+form>input::after {
+    color: blue;
+}
+
+h5 {
+    color: grey;
+    position: relative;
+    left: 160px;
+    top: -20px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+#btn {
+    /* border: 2px solid red; */
+    color: white;
+    font-size: 30px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #84c225;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+
+form {
+    margin: auto;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 25px 0px;
+
+    color: #84c225;
+    font-size: 25px;
+
+}
+
+h2,
+p {
+    color: rgba(255, 217, 0, 0.649);
+}
+
+span {
+    color: #84c225;
+    text-decoration: dotted;
+}
+
+a {
+    text-decoration: double;
+}
+
+body {
+    /* background-image: url(./SabjiMandi.com-removebg-preview.png); */
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-color: black;
+    background-position: center;
+}
