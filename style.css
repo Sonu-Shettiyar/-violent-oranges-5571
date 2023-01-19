@@ -5,6 +5,14 @@
 
 }
 
+body {
+    background-image: url("./SabjiMandi.com-removebg-preview.png");
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-size: 620px;
+    background-position: center bottom;
+}
+
 /* p,
 h2,
 h3,
@@ -62,24 +70,45 @@ body {
 #nav {
     margin-top: 0px;
     /* border: 2px solid green; */
-
+    box-sizing: border-box;
     margin: auto;
     /* height: 90px; */
 
     /* width: 900px; */
 }
 
+p {
+    color: rgba(100, 94, 94, 0.944);
+}
+
+.basket>div>.fa-basket-shopping {
+    color: red;
+    height: 30px;
+    margin-right: 20px;
+    font-size: 28px;
+}
+
 .secnav {
     display: flex;
     align-items: flex-end;
     height: 70px;
+    /* position: fixed; */
+    /* margin-bottom: 100px; */
+    /* top: 20px; */
     justify-content: space-between;
 }
 
 
 .secnav>img {
 
-    height: 100px;
+    /* height: 150px; */
+    /*00px; */
+    margin-left: 50px;
+    width: 110px;
+
+
+    /* margin-bottom:0px; */
+
 
 
 
@@ -156,15 +185,22 @@ form>input:nth-child(2) {
     /* border: 2px solid red; */
 }
 
+
+.d {
+    color: red;
+}
+
 #ByCategory>select {
     /* width: 285px; */
     height: 37px;
     font-size: 17px;
+    text-decoration: line;
     font-weight: 600;
     color: white;
     /* background-color: linear-gradiant(red, navy);
      */
-    background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23));
+    /* background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23)); */
+    background-color: #84c225;
     border: none;
     /* margin-right: 99px; */
     padding: 0px 92px 0px 0px;
@@ -173,8 +209,39 @@ form>input:nth-child(2) {
 
 #SecMain {
     margin-top: 50px;
+    transition: all 1s ease 2s;
+
     /* border: 2px solid red; */
 
+}
+
+.arrowq {
+    background-color: rgba(208, 202, 202, 0.642);
+    width: 35px;
+    height: 35px;
+
+    border-radius: 92px;
+    position: relative;
+    /* background-color: aqua; */
+    bottom: -250px;
+    left: -20px;
+    color: rgba(128, 128, 128, 0.303);
+
+}
+
+.arroww {
+    background-color: rgba(208, 202, 202, 0.642);
+    width: 35px;
+    height: 35px;
+    text-align: end;
+
+    border-radius: 92px;
+    position: relative;
+    /* background-color: aqua; */
+    bottom: 250px;
+    margin-left: 98%;
+    /* left: -20px; */
+    color: rgba(128, 128, 128, 0.303);
 }
 
 #SecMain>h2 {
@@ -196,7 +263,6 @@ form>input:nth-child(2) {
 
 .product-card {
     padding: 10px;
-    background-color: whitesmoke;
     /* box-shadow: rgb(68, 200, 1) 0px 1px 4px; */
     transition-property: background-color;
     transition-duration: 1s;
@@ -222,6 +288,7 @@ form>input:nth-child(2) {
     text-align: end;
     font-size: 10px;
     padding: 3px;
+    padding-right: 10px;
     color: #E1565A;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 5px 0px;
@@ -231,11 +298,13 @@ form>input:nth-child(2) {
 marquee {
     margin-top: 20px;
     transition-property: unset;
-    transition-duration: 2s;
+    height: 30px;
+    transition-duration: 4s;
+    background-image: linear-gradient(rgb(200, 215, 35), rgb(68, 255, 0), rgb(142, 142, 220));
 }
 
 marquee>span {
-    color: gold;
+    color: rgb(0, 0, 0);
 }
 
 .app {
@@ -246,6 +315,13 @@ marquee>span {
     gap: 20px;
     /* border: 2px solid red; */
 
+}
+
+.Veg {
+    /* position: relative; */
+    /* top: px; */
+    width: 26px;
+    /* right: 20px; */
 }
 
 .app>div {
@@ -280,6 +356,7 @@ marquee>span {
 .mrp {
     font-size: 14px;
     /* border: 1px solid green; */
+
     margin-top: 0;
 }
 
@@ -289,11 +366,52 @@ marquee>span {
 
 }
 
-/* .mrp {} */
+
 
 .weight {
     margin: 10px;
 }
+
+.product-img {
+    position: relative;
+    right: 20px;
+    /* border: 2px solid red; */
+}
+
+.mrpdiv p {
+    color: black;
+
+}
+
+.mrpdiv {
+    padding: 2px;
+    background-color: rgb(230, 229, 229);
+    /* background-color: ; */
+    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.mrpdiv>button {
+    height: 25px;
+    border: none;
+    /* margin-left: 3px; */
+    background-color: #84c225;
+}
+
+.mrpdiv>.addbtn {
+    background-color: #F6D378;
+    margin-left: 100px;
+}
+
+
+
+
+
+/* .........SMALLL CARDS BELOW SLIDING */
+
+
 
 .winter-pro {
     display: grid;
@@ -549,6 +667,9 @@ marquee>span {
 
 .arrow2 {
     position: relative;
-    left: 1097px;
-    bottom: 200px;
+    /* left: 1097px; */
+    /* right: -1000px; */
+    right: 10px;
+    bottom: 210px;
+    text-align: end;
 }
