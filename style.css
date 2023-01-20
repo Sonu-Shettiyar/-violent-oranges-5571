@@ -178,6 +178,10 @@ form>input:nth-child(2) {
 
 }
 
+#ByCategory>.offers:hover a {
+    color: white;
+}
+
 #ByCategory>.offers {
     /* height: px; */
     padding: 6px;
@@ -185,6 +189,21 @@ form>input:nth-child(2) {
     /* border: 2px solid red; */
 }
 
+#ByCategory>.offers a {
+    text-decoration: none;
+    font-weight: lighter;
+    color: rgba(128, 128, 128, 0.823);
+}
+
+
+#rep {
+    /* border: 2px solid red; */
+    margin-top: 50px;
+}
+
+#rep>img {
+    width: 100%;
+}
 
 .d {
     color: red;
@@ -594,7 +613,7 @@ marquee>span {
 
 }
 
-/* footer-part */
+/*------------------------- footer-part------------------------ */
 #foot {
     /* margin: auto; */
     margin-top: 50px;
@@ -657,7 +676,10 @@ marquee>span {
     margin-top: -100px;
 }
 
-/* sliding button for set interval part */
+/*----------------------------------------------- sliding button for set interval part *-----------------------------------------*/
+
+
+
 .arrow1 {
     position: relative;
     top: 200px;

@@ -197,7 +197,7 @@ setInterval(function () {
     if (ct == len) {
         ct = 0;
     }
-}, 3000)
+}, 2000)
 
 
 let winters = [
