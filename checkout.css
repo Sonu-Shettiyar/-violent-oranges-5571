@@ -7,6 +7,10 @@
     display: flex;
 }
 
+.green {
+    background-color: green;
+}
+
 #nav {
     display: flex;
     justify-content: space-around;

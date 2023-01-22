@@ -1,5 +1,7 @@
 let up = document.querySelector(".app");
 let chnge = [];
+let forcat = []
+let forSearch = [];
 let allData = [];
 let D = JSON.parse(localStorage.getItem("basket")) || []
 let total = document.querySelector("#bestlength");
@@ -12,6 +14,8 @@ fetch("https://63ca601d4f53a0042021af5b.mockapi.io/off")
         // console.log("sonu")
         display(data)
         chnge = data
+        forcat = data
+        forSearch = data
         allData = data
     })
 let itemNo = document.querySelector("#item");
@@ -116,9 +120,13 @@ function display(data) {
         qty.className = "qty";
         add.className = "addbtn";
         add.innerText = "Add 🧺";
-        itemNo.innerText = '';
         it.innerText = big.length;
+        itemNo.innerText = '';
+
         add.addEventListener("click", () => {
+            itemNo.textContent = D.length;
+
+
             if (rep(element)) {
                 alert("Already in Cart")
             } else {
@@ -141,6 +149,7 @@ function display(data) {
 
     });
 }
+console.log(allData)
 function rep(data) {
     for (let i = 0; i < D.length; i++) {
 
@@ -194,4 +203,49 @@ out.addEventListener("click", function () {
         window.location.href = "./login.html"
     }, 2000)
 
+})
+
+// 
+
+
+
+// -----------------------------------------------------------------------------------------filtering [part]---
+
+
+let cat = document.querySelector("#shopByCategory");
+
+cat.addEventListener("change", function () {
+
+    if (cat.value == "onu") {
+        return display(forcat)
+        console.log(D)
+    }
+    let fil = forcat.filter((ele, ind) => {
+
+        if (ele.category == cat.value) {
+            return true
+        }
+    })
+
+    return display(fil)
+})
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------search by title-------------------------------------------
+
+
+
+let sarch = document.querySelector("#search");
+let vaw = document.querySelector("#Search-products")
+
+sarch.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let fil = allData.filter((ele, ind) => {
+
+        if (ele.title.toUpperCase().includes(vaw.value.toUpperCase()) == true) {
+            return true;
+        }
+    })
+    display(fil)
 })

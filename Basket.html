@@ -401,6 +401,10 @@
             margin-left: 240px;
             margin-top: -100px;
         }
+
+        .phone {
+            display: none;
+        }
     </style>
 </head>
 
@@ -561,10 +565,11 @@
     let cont = document.querySelector("#cart-container")
     let CartData = JSON.parse(localStorage.getItem("basket")) || [];
     let total = document.querySelector("#cart-total");
-
+    let count = document.querySelector("#itemw");
     display(CartData)
     function display(data) {
         cont.innerHTML = "";
+        count.textContent = CartData.length;
 
         data.forEach((element, ind) => {
 
