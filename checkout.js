@@ -2,6 +2,7 @@ let data = localStorage.getItem("checkout");
 
 
 
+let total = document.querySelector("#tot");
 
 let flag = false;
 
@@ -18,17 +19,20 @@ let city1 = document.querySelector("#City");
 let area = document.querySelector("#Area");
 let pincode = document.querySelector("#Pincode");
 let arr = [];
+let h = false;
+
 ADD.addEventListener("click", function () {
+    // console.log()
 
 
     if (house.value == "") {
-        return alert("Please fill all Mandatory fields ! to proceed")
+        return alert("Please fill all Mandatory fields ! #house")
     } else if (first.value == "") {
-        return alert("Please fill all Mandatory fields ! to proceed")
+        return alert("Please fill all Mandatory fields ! #FristName")
     } else if (area.value == "") {
-        return alert("Please fill all Mandatory fields ! to proceed")
+        return alert("Please fill all Mandatory fields ! #area")
     } else if (pincode.value == "") {
-        return alert("Please fill all Mandatory fields ! to proceed")
+        return alert("Please fill all Mandatory fields ! #Pincode")
     }
     let obj = {
         name: first.value,
@@ -39,11 +43,13 @@ ADD.addEventListener("click", function () {
         landmark: landmark.value,
         city: city1.value,
         area: area.value,
-        pincode: pincode.value
+        pincode: pincode.value,
+        total: total.innerText
     }
 
-    ADD.textContent = "ADDED SUCCESSFULLY";
+    ADD.textContent = " ✅ ADDED SUCCESSFULLY";
     arr.push(obj)
+    h = true;
     localStorage.setItem("final", JSON.stringify(arr));
     flag = true;
 
@@ -55,20 +61,19 @@ ADD.addEventListener("click", function () {
 let Basket_val = document.querySelector("#val");
 Basket_val.textContent = data;
 let charge = document.querySelector("#free");
-let total = document.querySelector("#tot");
 let coupon = document.querySelector("#Couponcode");
 let Ac = document.querySelector("#AC");
 let Cimg = document.querySelector("#Cimg");
 
 Cimg.addEventListener("click", function () {
 
-    alert("Use :-" + ` FoodProduct`);
+    alert("Use :- " + `FoodPocket`);
 })
 if (data >= 499) {
     charge.textContent = "Free"
     total.textContent = data;
 } else {
-    charge.textContent = Number(25) + ".00";
+    charge.textContent = "+" + Number(25) + ".00";
     total.textContent = Number(data) + Number(25)
 
 }
@@ -90,9 +95,13 @@ btn.addEventListener("submit", (event) => {
 
 
 let payment = document.querySelector("#proceed");
+
+if (h == true) {
+    payment.className = "green"
+}
 payment.addEventListener("click", function () {
     if (flag) {
-        alert("")
+        window.location.href = "./payment.html"
     } else {
         alert("Please provide delivery address first ")
     }

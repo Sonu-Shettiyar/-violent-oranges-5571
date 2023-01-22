@@ -117,15 +117,17 @@ function display(data) {
         it.innerText = big.length;
         add.addEventListener("click", function () {
 
+            alert("Please do login First");
+            window.location.href = "./login.html"
 
             // console.log(element[count])
-            big.push(element[count])
-            localStorage.setItem("bigcart", JSON.stringify(big));
-            if (qty.value == 1) {
-                it.innerText = big.length
-            } else {
-                it.innerText = Number(big.length) + Number(qty.value)
-            }
+            // big.push(element[count])
+            // localStorage.setItem("bigcart", JSON.stringify(big));
+            // if (qty.value == 1) {
+            //     it.innerText = big.length
+            // } else {
+            //     it.innerText = Number(big.length) + Number(qty.value)
+            // }
 
 
         })
@@ -279,15 +281,23 @@ displaySix(cleaning, clean)
 // let log = document.querySelector("#log");
 
 let log = document.querySelector("#log");
+let out = document.querySelector("#out");
 
 let nme = localStorage.getItem("name");
+if (nme == null) {
+    log.innerText = "Login/SignUp";
+    out.innerText = "   "
 
-log.innerText = nme;
-let out = document.querySelector("#out");
-out.innerText = "Logout"
+} else {
+    log.innerText = nme;
+    out.innerText = "Logout"
+
+}
+
+
 
 out.addEventListener("click", function () {
-    log.innerText = "Lgin/SignUp";
+    log.innerText = "Login/SignUp";
     setTimeout(() => {
 
         window.location.href = "./login.html"
@@ -297,9 +307,13 @@ out.addEventListener("click", function () {
 
 
 
+// ------------------------------------------------------------------------------------------------------------------------------------------------cATEGORY---------------------------------------------------------
 
+let cat = document.querySelector("#shopByCategory");
 
-
+cat.addEventListener("click", function () {
+    window.location.href = "./offers.html"
+})
 
 
 

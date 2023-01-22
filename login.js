@@ -22,7 +22,7 @@ form.addEventListener("submit", function (event) {
     });
     let signal = [];
     if (flag) {
-        alert("Login Succefull !");
+        alert("Logged in Succefully!");
 
         window.location.href = "./index.html"
     } else {

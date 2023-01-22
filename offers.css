@@ -206,6 +206,8 @@ form>input:nth-child(2) {
 
 }
 
+
+
 /* 
 
 
@@ -272,11 +274,11 @@ form>input:nth-child(2) {
 }
 
 .sidebar {
-    width: 35%;
+    width: 100%;
     position: relative;
     top: -33px;
     border: 2px solid rgba(138, 138, 138, 0.5);
-
+    padding-right: 60px;
     border: none;
     border-right: 1px solid grey
 }
@@ -293,14 +295,15 @@ form>input:nth-child(2) {
     /* display: flex;
      */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     line-height: 2px;
     /* border: 2px solid red; */
     /* width: 70%; */
     margin-left: 0px;
-    border: 1px solid blue;
-    border: none;
+    /* border: 1px solid blue; */
+    /* border: none; */
+    /* margin-left: 50px; */
     padding-left: 19px;
     /* border-right: 1px solid grey */
 }
@@ -382,14 +385,30 @@ select>option {
 .addbtn {
     /* margin-left: 70px; */
     /* color: #E1565A; */
-    background-color: #D78C42;
+    background-color: #e3ab73a4;
     border: none;
-    font-size: 18px;
-    padding: 10px;
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 16px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 60px;
     margin: auto;
     /* width: 90px; */
+}
+
+.phone,
+#location,
+#log,
+#out {
+    display: none;
+}
+
+/* #SecMain,
+#content {
+    /* width: 0%; */
+/* } */
+
+*/ .secnav {
+    margin-top: 30px;
 }
 
 .down>a {
@@ -444,4 +463,411 @@ select>option {
     width: 630px;
     margin-left: 240px;
     margin-top: -100px;
+}
+
+select:hover option {
+    background-color: white;
+}
+
+
+#shopByCategory:hover option {
+    background-color: rgb(159, 30, 30);
+}
+
+@media all and (max-width:1000px) and (min-width:200px) {
+
+    #nav {
+        margin-top: 0px;
+        /* border: 2px solid green; */
+        /* box-sizing: border-box; */
+        margin: auto;
+
+        /* height: 90px; */
+        position: sticky;
+        background-color: white;
+        top: 0;
+        /* width: 900px; */
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 70px;
+        width: 30%;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 70px;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+
+
+    .secnav>img {
+
+        /* height: 150px; */
+        /*00px; */
+        margin-left: 50px;
+        width: 210px;
+
+
+        /* margin-bottom:0px; */
+
+
+
+
+    }
+
+    .fa-magnifying-glass {
+        position: relative;
+        /* left: -40px;
+        top: 10px; */
+        display: none;
+
+    }
+
+    form {
+        /* margin-left: 30px; */
+        /* height: 50px; */
+        display: none;
+    }
+
+    form>input:nth-child(1) {
+        width: 100%;
+        /* height: 30px; */
+
+    }
+
+    form>input:nth-child(2) {
+        /* height: 15px; */
+        margin-left: 0px;
+        border: 2px solid #84c225;
+        background-color: #84c225;
+
+    }
+
+    .basket>div {
+        width: 20px;
+        display: none;
+        background-color: #F2F2F2;
+
+    }
+
+    .off {
+        display: none;
+    }
+
+    .smartBasket {
+        display: grid;
+        gap: 10px;
+        /* text-align: center; */
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgb(54, 50, 50);
+
+    }
+
+    .sliding img {
+        width: 100%;
+    }
+
+    .arrow1,
+    .arrow2,
+    .arrowq,
+    .arroww {
+        display: none;
+    }
+
+    #ByCategory>select {
+        /* width: 285px; */
+        /* height: 37px; */
+        font-size: 17px;
+        text-decoration: line;
+        font-weight: 600;
+        color: white;
+        /* background-color: linear-gradiant(red, navy);
+         */
+        /* background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23)); */
+        background-color: #84c225;
+        border: none;
+        /* margin-right: 99px; */
+        padding: 0px 92px 0px 0px;
+
+    }
+
+    .app {
+        /* display: flex;
+     */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        /* border: 2px solid red; */
+
+    }
+
+    .winter-pro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .provi-store {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .nour-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .home-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .clean-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .down img {
+        width: 100%;
+        /* background-color: 2px solid red; */
+    }
+
+
+
+    #dd {
+        width: 10px;
+        display: none;
+    }
+}
+
+@media all and (max-width:499) and (min-width:150px) {
+
+    #nav {
+        margin-top: 0px;
+        /* border: 2px solid green; */
+        /* box-sizing: border-box; */
+        margin: auto;
+
+        /* height: 90px; */
+        position: sticky;
+        background-color: white;
+        top: 0;
+        /* width: 900px; */
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 35px;
+        width: 30%;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 35px;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+
+
+    .secnav>img {
+
+        /* height: 150px; */
+        /*00px; */
+        margin-left: 50px;
+        width: 105px;
+
+
+        /* margin-bottom:0px; */
+
+
+
+
+    }
+
+    .fa-magnifying-glass {
+        position: relative;
+        /* left: -40px;
+        top: 10px; */
+        display: none;
+
+    }
+
+    form {
+        /* margin-left: 30px; */
+        /* height: 50px; */
+        display: none;
+    }
+
+    form>input:nth-child(1) {
+        width: 100%;
+        /* height: 30px; */
+
+    }
+
+    form>input:nth-child(2) {
+        /* height: 15px; */
+        margin-left: 0px;
+        border: 1px solid #84c225;
+        background-color: #84c225;
+
+    }
+
+    .basket>div {
+        width: 10px;
+        display: none;
+        background-color: #F2F2F2;
+
+    }
+
+    .off {
+        display: none;
+    }
+
+    .smartBasket {
+        display: grid;
+        gap: 5px;
+        /* text-align: center; */
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgb(54, 50, 50);
+
+    }
+
+    .sliding img {
+        width: 100%;
+    }
+
+    .arrow1,
+    .arrow2,
+    .arrowq,
+    .arroww {
+        display: none;
+    }
+
+    #ByCategory>select {
+        /* width: 285px; */
+        /* height: 37px; */
+        font-size: 12px;
+        text-decoration: line;
+        font-weight: 600;
+        color: white;
+        /* background-color: linear-gradiant(red, navy);
+         */
+        /* background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23)); */
+        background-color: #84c225;
+        border: none;
+        /* margin-right: 99px; */
+        padding: 0px 52px 0px 0px;
+
+    }
+
+    .app {
+        /* display: flex;
+     */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        /* border: 2px solid red; */
+
+    }
+
+    .winter-pro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .provi-store {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .nour-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .home-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .clean-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .down img {
+        width: 100%;
+        /* background-color: 2px solid red; */
+    }
+
+
+
+    #dd {
+        width: 10px;
+        display: none;
+    }
 }

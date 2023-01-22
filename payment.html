@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payment - page</title>
     <link rel="stylesheet" href="./all.min.css">
     <link rel="shortcut icon" href="./bigmart.png">
 
     <link rel="stylesheet" href="./payment.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="./bigMart.com-removebg-preview.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Poppins&family=Source+Sans+Pro:wght@300&family=Tinos&display=swap');
+
+        * {
+            font-family: 'IBM Plex Serif', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            /* font-family: serif; */
+        }
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Poppins&family=Source+Sans+Pro:wght@300&family=Tinos&display=swap');
 
@@ -29,9 +41,85 @@
         <a href="./index.html"><img src="./bigmart.png" alt=""></a>
         <h2>+91 83810 83498 </h2>
     </div>
-    <div class="card">
+    <div class="main">
+        <div class="card">
+            <h1 id="show"></h1>
+            <h1>Thank You <span id="name"></span>!</h1>
+            <h3>for choosing <span style="color: rgb(141, 225, 14);">BigMart</h2>
+            </h3>
 
+            <p>Your product will be delivering at <span id="location"></span></p>
+            <h3>Your Payable Amount is <span id="total" style="color: red;"></span></h3>
+            <p> Please do Online Payment / UPI for secure and safe payment. Stay untouched and stay safe </p>
+            <h4>Expected Delivery on between Sunday 9:00 am - Wednesday 11:00 am </h4>
+
+
+        </div>
+        <div class="dash">
+            <h2>Choose Payment Method
+
+            </h2>
+            <input type="radio" name="son" id="phonepay" value="phonepay" placeholder="sonu">PhonePay <img
+                src="./phone.png" alt=""><br>
+            <input type="radio" name="" id="gPay">Google pay <img src="./gpay.png" alt=""><br>
+            <input type="radio" name="" id="amazon">Amazon Pay <img src="./amazon.png" alt=""><br>
+            <input type="radio" name="" id="mobikwick">Mobikwick <img src="./Mobi.png" alt=""><br>
+            <input type="radio" name="" id="paytm">Paytm Wallet <img src="./paytm'.png" alt=""><br>
+            <input type="radio" name="" id="Net_Banking">Airtel Banking <img src="./Airtel.png" alt=""><br>
+            <div id="in">
+                <input type="radio" name="" id="card"> <b> Net Banking/Card</b>
+                <br>
+                <hr>
+                <hr style="border: 2px solid rgb(0, 0, 0);">
+                <ul>Valid From:
+                    <input type="datetime-local" class="qcard">
+                </ul>
+                <ul>Expiry date
+                    <input type="datetime-local" class="qcard">
+                </ul>
+                <ul>
+                    CV <input type="password" name="" placeholder="last 3 digit of card..." id="">
+                </ul>
+
+            </div>
+            <button type="click" id="confirm">Confirm & Pay</button>
+        </div>
     </div>
 </body>
+<script>
+    let data = JSON.parse(localStorage.getItem("final"))
+    console.log(data);
+
+    let nme = document.querySelector("#name");
+    let loc = document.querySelector("#location");
+    let total = document.querySelector("#total");
+
+
+
+    nme.innerText = data[0].name;
+    loc.innerText = data[0].house + " " + data[0].landmark + " " + data[0].street + " " + data[0].area + " " + data[0].pincode;
+
+    total.innerText = data[0].total + ".00 only"
+
+
+    // ---------------------------------------------------------------------------------------------------
+
+    let details = document.querySelector(".qcard");
+    let shower = document.querySelector("#show")
+    let firm = document.querySelector("#confirm");
+    firm.addEventListener("click", function () {
+
+        let div = document.createElement("h2")
+        div.innerText = "✅Payment  done Succefully!";
+        // div.style.fontWeight = 00;
+        let p = document.createElement("p");
+        p.innerText = "redirecting to main page in 5 sec..."
+        show.append(div, p)
+        setTimeout(() => {
+            window.location.href = "./index.html"
+        }, 5000)
+    })
+
+</script>
 
 </html>
