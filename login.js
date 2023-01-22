@@ -7,7 +7,6 @@ let email1 = document.querySelector("#email");
 
 let pass = document.querySelector("#pass");
 
-
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     let flag = false;
@@ -16,6 +15,9 @@ form.addEventListener("submit", function (event) {
             console.log("login")
             flag = true;
             // return 
+            // console.log("sonu " + element.first)
+
+            localStorage.setItem("name", element.first)
         }
     });
     let signal = [];

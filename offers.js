@@ -1,6 +1,7 @@
 let up = document.querySelector(".app");
 let chnge = [];
 let allData = [];
+let D = JSON.parse(localStorage.getItem("basket")) || []
 let total = document.querySelector("#bestlength");
 fetch("https://63ca601d4f53a0042021af5b.mockapi.io/off")
     .then((res) => {
@@ -117,22 +118,17 @@ function display(data) {
         add.innerText = "Add 🧺";
         itemNo.innerText = '';
         it.innerText = big.length;
-        add.addEventListener("click", function () {
+        add.addEventListener("click", () => {
+            if (rep(element)) {
+                alert("Already in Cart")
+            } else {
+                D.push({ ...element, quantity: 1 })
 
-            old.push(element)
-            // console.log(element[count])
-            // big.push(element)
-            // localStorage.setItem("bigcart", JSON.stringify(big));
-            // if (qty.value == 1) {
-            //     it.innerText = big.length
-            //     display(data)
-
-            // } else {
-            //     it.innerText = Number(big.length) + Number(qty.value)
-            // }
-            localStorage.setItem("old", JSON.stringify(old))
-
+                localStorage.setItem("basket", JSON.stringify(D));
+                alert("Product Added To Cart")
+            }
         })
+
         card.className = "product-card"
         vegSymbol.className = "Veg"
         img.className = "product-img"
@@ -144,6 +140,19 @@ function display(data) {
 
 
     });
+}
+function rep(data) {
+    for (let i = 0; i < D.length; i++) {
+
+        if (data.title == D[i].title) {
+            return true
+
+
+        }
+
+    }
+    return false
+
 }
 let sorter = document.querySelector("#sort");
 let p = allData;
@@ -165,4 +174,24 @@ sorter.addEventListener("change", function () {
         }
     })
     display(res)
+})
+
+// -------------------------------------------------------------------------------------------login name-----------
+
+
+let log = document.querySelector("#log");
+
+let nme = localStorage.getItem("name");
+
+log.innerText = nme;
+let out = document.querySelector("#out");
+out.innerText = "Logout"
+
+out.addEventListener("click", function () {
+    log.innerText = "Lgin/SignUp";
+    setTimeout(() => {
+
+        window.location.href = "./login.html"
+    }, 2000)
+
 })

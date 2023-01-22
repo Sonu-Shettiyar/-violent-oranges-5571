@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./all.min.css">
+
+    <title>Cart_Baskket_Page</title>
+    <link rel="shortcut icon" href="./bigmart.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Poppins&family=Source+Sans+Pro:wght@300&family=Tinos&display=swap');
+
+        * {
+            font-family: 'IBM Plex Serif', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            /* font-family: serif; */
+        }
+    </style>
+    <style>
+        /* Write all necessery css here  */
+        body {
+            margin: 0px;
+            padding: 0;
+            /* background-image: linear-gradient(to right, red, green, yellow, white, blue); */
+            background-color: #ffffffe0;
+        }
+
+        .product-card {
+            font-size: 12px;
+        }
+
+        .title {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        #cont {
+            width: 75%;
+            margin: auto;
+        }
+
+        .phone {
+            text-align: left;
+            /* border: 1px solid red; */
+            display: flex;
+            text-align: right;
+
+            justify-content: end;
+            /* padding-right: 173px; */
+            /* padding-top: 0px; */
+            /* margin-top: 0px; */
+            height: 22px;
+            margin-bottom: 9px;
+
+        }
+
+        .basket>img {
+            width: 50px;
+
+        }
+
+        .phone>p {
+            /* color: #ede1e1; */
+            margin-left: 10px;
+            font-size: small;
+
+        }
+
+        .phone>p>select {
+            border: none;
+        }
+
+
+
+        #cont {
+            /* margin-top: 0px; */
+            /* border: 2px solid green; */
+            box-sizing: border-box;
+            margin: auto;
+            position: sticky;
+            top: 0;
+            /* height: 90px; */
+
+            /* width: 900px; */
+        }
+
+        p {
+            color: rgba(100, 94, 94, 0.944);
+        }
+
+        #Search-products {
+            padding-left: 20px;
+        }
+
+        .basket>div>.fa-basket-shopping {
+            color: red;
+            height: 30px;
+            margin-right: 20px;
+            font-size: 28px;
+        }
+
+        .secnav {
+            display: flex;
+            align-items: flex-end;
+            height: 70px;
+            /* position: fixed; */
+            /* margin-bottom: 100px; */
+            /* top: 20px; */
+            justify-content: space-between;
+        }
+
+
+        .secnav>a>img {
+
+            /* height: 150px; */
+            /*00px; */
+            margin-left: 50px;
+            width: 110px;
+
+
+            /* margin-bottom:0px; */
+
+
+
+
+        }
+
+        .fa-magnifying-glass {
+            position: relative;
+            left: -40px;
+            top: 10px;
+
+        }
+
+        form {
+            margin-left: 30px;
+            height: 50px;
+
+        }
+
+        form>input:nth-child(1) {
+            width: 539px;
+            height: 30px;
+
+        }
+
+        form>input:nth-child(2) {
+            height: 35px;
+            margin-left: 0px;
+            border: 2px solid #84c225;
+            background-color: #84c225;
+
+        }
+
+        .basket {
+            width: px;
+            margin-top: 0px;
+            text-align: end;
+            padding: 10px 20px 0px 20px;
+            line-height: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            background-color: #F2F2F2;
+        }
+
+
+
+        .basket>div>img {
+            width: 75px;
+            background-color: #F2F2F2;
+
+        }
+
+        #ByCategory {
+            height: 37px;
+            /* border: 1px solid green;/ */
+            border: 1px solid #6666662b;
+            display: flex;
+            /* align-items: center; */
+            background-color: whitesmoke;
+
+        }
+
+        #ByCategory>.offers:hover {
+            /* background-color: #84c225; */
+            background-image: radial-gradient(black, rgb(7, 138, 0), rgb(237, 231, 51));
+            color: white;
+
+        }
+
+        #ByCategory>.offers:hover a {
+            color: white;
+        }
+
+        #ByCategory>.offers {
+            /* height: px; */
+            padding: 6px;
+
+            /* border: 2px solid red; */
+        }
+
+        #ByCategory>.offers a {
+            text-decoration: none;
+            font-weight: lighter;
+            color: rgba(128, 128, 128, 0.823);
+        }
+
+        #ByCategory>select {
+            /* width: 285px; */
+            height: 37px;
+            font-size: 17px;
+            text-decoration: line;
+            font-weight: 600;
+            color: white;
+            /* background-color: linear-gradiant(red, navy);
+     */
+            /* background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23)); */
+            background-color: #84c225;
+            border: none;
+            /* margin-right: 99px; */
+            padding: 0px 92px 0px 0px;
+
+        }
+
+
+
+        #cartbar {
+            width: 100%;
+            border: none;
+            border-top: 2px solid rebeccapurple;
+            display: flex;
+        }
+
+        #cart-container {
+            /* margin-top: 90px; */
+            display: grid;
+            /* border: 2px solid rgb(21, 17, 17); */
+            width: 65%;
+            grid-template-columns: repeat(2, 400px);
+            /* gap: 10px; */
+
+        }
+
+        .cards {
+            /* margin: auto; */
+            margin-top: 30px;
+            line-height: 8px;
+            background-color: #f5f3f3;
+            width: 60%;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding-left: 20px;
+            border: 1px solid #55555525;
+            /* border: 2px solid rgb(2, 255, 78); */
+        }
+
+        .off {
+            /* border: 1px solid red; */
+            text-align: end;
+            font-size: 10px;
+            padding: 5px;
+            padding-right: 10px;
+            /* width: 50%; */
+            color: #E1565A;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 5px 0px;
+            margin-bottom: 4px;
+        }
+
+        #headd {
+            margin: auto;
+            margin-top: 40px;
+            font-size: 28px;
+            color: #FAFFFF;
+            background-color: #555555;
+            text-align: center;
+        }
+
+        #descrip {
+            margin-top: 20px;
+            width: 35%;
+            padding: 10px;
+            height: 100vh;
+            position: sticky;
+            background-color: #F5F5F5;
+            top: 0;
+            border: 5px solid rgba(173, 181, 173, 0.373);
+        }
+
+        .di {
+            background-color: #fce27b74;
+            font-size: 20px;
+            /* border-radius: 20px; */
+            border: none;
+            margin-left: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        .remove {
+            background-color: #fce27b7b;
+            /* width: 50px; */
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            margin-left: 20px;
+        }
+
+
+        table {
+            /* border-bottom-style: dotted; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-bottom: 3px dashed rgb(8, 8, 8);
+        }
+
+        th {
+            border: 3px solid rgb(214, 192, 22);
+            margin: 0;
+            background-color: #C6CC74;
+        }
+
+        #checkout {
+            display: block;
+            margin-left: 60%;
+            /* margin: auto; */
+            /* text-align: end; */
+            border: none;
+            border: 2px solid rgba(225, 255, 0, 0.653);
+            background-color: #C6CC74;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 19px;
+        }
+
+        /* -----------------------------------------------------------------------------------------footer------------------------------------------------------------- */
+        #foot {
+            /* margin: auto; */
+            margin-top: 50px;
+            display: flex;
+            /* border: 2px solid black; */
+            /* justify-content: space-between; */
+        }
+
+        .down>a {
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            font-weight: 100;
+            font-size: 14px;
+            color: rgba(128, 128, 128, 0.863);
+        }
+
+        .down>.green {
+            color: #84c225;
+            font-size: 16px;
+        }
+
+        .down:nth-child(3)>img {
+            width: 90%;
+        }
+
+        .down {
+            /* border: 2px solid red; */
+            margin-right: 50px;
+            width: 500px;
+            padding: 10px;
+
+        }
+
+        .down:last-child {
+            margin-right: 0;
+        }
+
+        #city>h3 {
+            color: #84c225;
+        }
+
+        #para {
+            display: flex;
+            /* justify-content: space-around; */
+            text-align: left;
+        }
+
+        #para>p {
+            /* color: #84c225; */
+            margin-left: 240px;
+            margin-top: -40px;
+            color: rgba(128, 128, 128, 0.868);
+
+        }
+
+        #city>img {
+            width: 630px;
+            margin-left: 240px;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <div id="nav">
+            <div class="phone">
+                <p> <i class="fa-solid fa-phone"></i> +91 80 4343 5000</p>
+                <p><i class="fa-solid fa-location-dot"></i><select name="location" id="location">
+                        <option value="">Chandrapur</option>
+
+                    </select>
+                <p><i class="fa-solid fa-user"></i><a href="./signup.html" style="text-decoration: none;">
+                        <p id="log">Login/Sign Up</p>
+                    </a>
+
+            </div>
+            <div class="secnav">
+                <a href="./index.html">
+                    <img src="./bigmart.png" alt="" style="width: 210px;"></a>
+                <form action="Search">
+                    <input type="text" id="Search-products" placeholder="Search for Products">
+                    <input type="submit" value="        " src="">
+                    <i class="fa-solid fa-2x fa-magnifying-glass"></i>
+
+                </form>
+                <div class="basket">
+                    <div>
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <!-- <img src="https://image.pngaaa.com/63/5035063-middle.png" alt=""> -->
+                    </div>
+                    <div><a href="./Basket.html" style="text-decoration: none;">
+
+                            My Basket
+                            <p>
+
+                                <span id="itemw"></span>
+                                items
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="ByCategory">
+                <select value="SHOP BY CATEGORY" id="shopByCategory" placeholder="SHOP BY CATEGORY">
+                    <option value="SHOP BY CATEGORY">
+                        SHOP BY CATEGORY
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+
+                    </option>
+
+                </select>
+                <div class="offers">
+                    🏷️
+                    OFFERS
+                </div>
+            </div>
+            <h1 id="headd">Items Description</h1>
+            <div id="cartbar">
+
+                <div id="cart-container">
+                    <!-- Here Append All the cart Products  -->
+                </div>
+                <div id="descrip">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item Description</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Sub-total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+
+                    </table>
+                    <h2 id="total" style="text-align: end;">Total Price :-<span id="cart-total"
+                            style="margin-left: 40px;">0</span></h1>
+                        <hr style="border: 2px dashed rgb(75, 60, 60);">
+                        <button id="checkout">Checkout ➡️</button>
+
+                </div>
+            </div>
+
+            <!-- ----------------------------------------------------------------------------footer------------------------------------------------------------------------------- -->
+            <div id="foot">
+                <div class="down">
+                    <a href="" class="green">SabjiMandi</a>
+                    <a>
+                        About Us</a>
+                    <a href="">In News</a>
+                    <a href="">Green bigbasket</a>
+                    <a href="">Privacy Policy</a><a href="">Affiliate</a><a href="">Terms and Conditions</a><a
+                        href="">Careers At bigbasket</a><a href="">bb Instant</a><a href="">bb Daily</a><a href="">bb
+                        Blog</a><a href="">bbnow</a>
+                </div>
+                <div class="down">
+                    <a href="" class="green">Help</a>
+                    <a href="">FAQs</a><a href="">Contact Us</a>
+                    <a href="">bb Wallet FAQs</a>
+                    <a href="">bb Wallet T&Cs</a>
+                    <a href="">Vendor Connect</a>
+
+                </div>
+                <div class="down">
+                    <a href="" class="green">Download Our App</a>
+                    <img src="https://www.bbassets.com/static/v2626/custPage/build/content/img/Google-App-store-icon.png"
+                        alt="">
+                    <img src="https://www.bbassets.com/static/v2626/custPage/build/content/img/Apple-App-store-icon.png"
+                        alt="">
+                </div>
+                <div class="down">
+                    <a href="" class="green">Get Social With Us</a>
+
+                    <div class="socials">
+                        <img src="./Socials.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="city">
+                <h3>POPULAR CATEGORIES:</h3>
+                <h3>POPULAR BRANDS:</h3>
+                <h3>CITIES WE SERVE:</h3>
+                <div id="para">
+
+
+                    <p>
+                        Bangalore, Hyderabad, Mumbai, Pune, Chennai, Delhi, Mysore, Madurai, Coimbatore,
+                        Vijayawada-Guntur,
+                        Kolkata, Ahmedabad-Gandhinagar, Nashik Business, Lucknow-Kanpur, Gurgaon, Vadodara,
+                        Visakhapatnam,
+                        Surat, Nagpur, Patna, Indore, Chandigarh Tricity, Jaipur, Bhopal, Noida-Ghaziabad, Kochi,
+                        Krishna
+                        District, Bhubaneshwar-Cuttack, Guwahati, Renigunta, Hubli, Davanagere, Trichy, Amravati,
+                        Raipur,
+                        Rajkot, Gwalior, Bareilly, Allahabad, Hyderabad Rural, Bangalore Rural, Chennai Rural, Vizag
+                        Rural,
+                        Lucknow Rural, Noida Rural, Ahmedabad Rural, Bhopal Rural, Bhubaneswar Rural, Coimbatore
+                        Rural,
+                        Chandigarh Rural, Gurugram Rural, Guwahati Rural, Indore Rural, Kochi Rural, Kolkata Rural,
+                        Mumbai
+                        Rural, Mysore Rural, Nagpur Rural, Patna Rural, Pune Rural, Surat Rural, Vadodara Rural,
+                        Jaipur
+                        Rural, Ranchi, Nashik, Agra, Kozhikode, </p>
+                </div>
+                <h3 class="bottom">PAYMENT OPTIONS:</h3>
+                <img src="./pAYMENT.png" alt="">
+            </div>
+        </div>
+
+</body>
+<script>
+    let cont = document.querySelector("#cart-container")
+    let CartData = JSON.parse(localStorage.getItem("basket")) || [];
+    let total = document.querySelector("#cart-total");
+
+    display(CartData)
+    function display(data) {
+        cont.innerHTML = "";
+
+        data.forEach((element, ind) => {
+
+            let it = document.createElement("span")
+            // let card = document.createElement("div");
+            let get = document.createElement("div");
+            // let img = document.createElement("img");
+            let vegSymbol = document.createElement("img");
+            let comp = document.createElement("p");
+            let title = document.createElement("h4");
+            let starRating = document.createElement("p");
+            let weight = document.createElement("h5");
+            let mrpdiv = document.createElement("div");
+            let cross = document.createElement("p")
+            let discMrp = document.createElement("h5");
+            let inc = document.createElement("button");
+            inc.innerText = "+";
+            let qty = document.createElement("input")
+            qty.value = Number(1);
+            // let dec = document.createElement("button");
+            // dec.innerText = "-";
+            let add = document.createElement("button");
+            let card = document.createElement("div");
+            let img = document.createElement("img");
+            let brand = document.createElement("h2");
+            let price = document.createElement("h3");
+            let descc = document.createElement("p");
+            let cat = document.createElement("p");
+            // let inc = document.createElement("button");
+            // inc.innerText = "+";
+            let dec = document.createElement("button");
+            dec.innerText = "-";
+            let quan = document.createElement("span");
+            quan.innerText = element.quantity;
+            let remove = document.createElement("button");
+
+            get.innerText = `GET ${element.percent}% OFF`;
+            get.className = "off"
+
+            img.setAttribute("src", element.Productimage);
+
+            vegSymbol.src = "./veg.png";
+
+
+            comp.innerText = element.company;
+            title.innerText = element.title;
+            starRating.innerText = element.star + " ⭐ " + element.ratings + " ratings";
+            weight.innerText = element.Type;
+
+            let d = document.createElement("p");
+            d.innerText = +element.percent / 100 * 100;
+            d.className = "cr"
+            cross.innerText = "Rs " + element.price
+            let ite = document.createElement("span")
+
+
+            inc.addEventListener("click", function () {
+                element.quantity++;
+
+                localStorage.setItem("basket", JSON.stringify(CartData))
+                ite.innerText = CartData.length
+                table(CartData)
+                display(CartData)
+            })
+            dec.addEventListener("click", function () {
+                if (element.quantity > 1) {
+                    element.quantity--;
+                }
+
+                quan.innerText = element.quantity;
+                ite.innerText = CartData.length;
+
+                localStorage.setItem("basket", JSON.stringify(CartData))
+                table(CartData)
+                display(CartData)
+
+            })
+            remove.innerText = "Remove";
+            remove.addEventListener("click", () => {
+                CartData = CartData.filter((el, i) => {
+                    if (ind === i) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                })
+                localStorage.setItem("basket", JSON.stringify(CartData))
+                table(CartData)
+                display(CartData)
+
+            })
+            comp.className = "comp";
+            title.className = "title";
+            starRating.className = "rate";
+            weight.className = "weight";
+            mrpdiv.className = "mrpdiv";
+            cross.className = "mrp";
+            qty.className = "qty";
+            card.className = "cards"
+            add.className = "addbtn";
+            add.innerText = "Add 🧺";
+            remove.className = "remove"
+            inc.className = "di"
+            dec.className = "di"
+
+            // items.append(ite)
+
+            mrpdiv.append(cross, inc, quan, dec, remove)
+            card.append(get, vegSymbol, img, comp, title, starRating, weight, mrpdiv)
+            cont.append(card);
+            // itemNo.append(it)
+            // up.append(cont)
+
+        });
+        let sum = 0;
+        for (let i = 0; i < CartData.length; i++) {
+
+            sum += (CartData[i].price * CartData[i].quantity)
+        }
+        // console.log(sum)
+        total.innerText = sum + ".00";
+        localStorage.setItem("checkout", total.innerText);
+    }
+    // ----------------------------------------------------------------------------------------------------------------------------------
+
+
+    // price table----------------------------------
+
+    let tbody = document.querySelector("tbody");
+    table(CartData);
+
+    function table(data) {
+        tbody.innerHTML = "";
+        data.forEach((element) => {
+            if (data.length == 0) {
+                let h1 = document.createElement("h1");
+                h1.innerText = "Your Cart Is Empty";
+                let btn = document.createElement("button");
+                btn.innerText = "Lets Buy Something";
+                btn.addEventListener("click", function () {
+                    window.location.href = "./index.html"
+                })
+            }
+
+            let bas = document.createElement("span");
+            let id = document.createElement("td");
+            let Title = document.createElement("td")
+            let Status = document.createElement("td");
+            let sub = document.createElement("td");
+            sub.style.textAlign = "center"
+            Status.style.textAlign = "center"
+            Title.style.textAlign = "center"
+            id.innerText = element.title;
+            Title.innerText = element.price;
+            Status.innerText = element.quantity;
+            sub.innerText = element.price * element.quantity + ".00"
+            // if (element.completed) {
+            //     Status.style.backgroundColor = "green"
+            // } else {
+            //     Status.style.backgroundColor = "red"
+            // }
+            bas.innerText = data.length;
+            // items.append(bas)
+
+
+
+            let tr = document.createElement("tr");
+            tr.append(id, Title, Status, sub);
+            tbody.append(tr)
+        });
+
+    }
+    // -------------------------------offer addEventListener--------------
+
+    let of = document.querySelector(".offers");
+    of.addEventListener("click", () => {
+        window.location.href = "./offers.html"
+    })
+    let checkout = document.querySelector("#checkout");
+
+    checkout.addEventListener("click", function () {
+        window.location.href = "./checkout.html"
+    })
+
+
+
+</script>
+
+</html>

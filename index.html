@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="x-icon" href="./SabjiMandi.com.png">
+    <!-- <link rel="shortcut icon" type="x-icon" href="./SabjiMandi.com.png"> -->
+    <link rel="shortcut icon" href="./bigmart.png">
 
     <title>
-        SabjiMandi.com
+        BigMArt_online-Grocery_store.com
     </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Poppins&family=Source+Sans+Pro:wght@300&family=Tinos&display=swap');
+
+        * {
+            font-family: 'IBM Plex Serif', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            /* font-family: serif; */
+        }
+    </style>
     <script src="https://kit.fontawesome.com/4cfda021ac.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./all.min.css">
@@ -29,10 +40,12 @@
                 <p><i class="fa-solid fa-user"></i><a href="./signup.html">
                         <p id="log">Login/Sign Up</p>
                     </a>
+                <p id="out">Logout</p>
+
 
             </div>
             <div class="secnav">
-                <img src="./SabjiMandi.com-removebg-preview.png" alt="">
+                <img src="./bigmart.png" alt="" href="./index.html">
                 <form action="Search">
                     <input type="text" id="Search-products" placeholder="Search for Products">
                     <input type="submit" value="        " src="">
@@ -44,9 +57,10 @@
                         <i class="fa-solid fa-basket-shopping"></i>
                         <!-- <img src="https://image.pngaaa.com/63/5035063-middle.png" alt=""> -->
                     </div>
-                    <div>
-                        My Basket
-                        <p><span id="item"></span> items</p>
+                    <div><a href="./Basket.html" style="text-decoration: none; color: gray;">
+                            My Basket
+                            <p><span id="item"></span> items</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -151,7 +165,7 @@
         <!-- footer -->
         <div id="foot">
             <div class="down">
-                <a href="" class="green">SabjiMandi</a>
+                <a href="" class="green">BigMart</a>
                 <a>
                     About Us</a>
                 <a href="">In News</a>
@@ -211,7 +225,7 @@
                     Rural, Ranchi, Nashik, Agra, Kozhikode, </p>
             </div>
             <h3 class="bottom">PAYMENT OPTIONS:</h3>
-            <img src="./pAYMENT.png" alt="">
+            <img src="./pAYMENT.png" alt="" id="dd">
         </div>
     </div>
 </body>

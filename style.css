@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("./SabjiMandi.com-removebg-preview.png");
+    background-image: url("./bigMart.com-removebg-preview.png");
     /* background-size: contain; */
     background-repeat: no-repeat;
     background-size: 620px;
@@ -73,7 +73,9 @@ body {
     box-sizing: border-box;
     margin: auto;
     /* height: 90px; */
-
+    position: sticky;
+    background-color: white;
+    top: 0;
     /* width: 900px; */
 }
 
@@ -95,6 +97,7 @@ p {
     /* position: fixed; */
     /* margin-bottom: 100px; */
     /* top: 20px; */
+
     justify-content: space-between;
 }
 
@@ -104,7 +107,7 @@ p {
     /* height: 150px; */
     /*00px; */
     margin-left: 50px;
-    width: 110px;
+    width: 210px;
 
 
     /* margin-bottom:0px; */
@@ -676,6 +679,10 @@ marquee>span {
     margin-top: -100px;
 }
 
+#Search-products {
+    padding-left: 20px;
+}
+
 /*----------------------------------------------- sliding button for set interval part *-----------------------------------------*/
 
 
@@ -694,4 +701,207 @@ marquee>span {
     right: 10px;
     bottom: 210px;
     text-align: end;
+}
+
+.sliding img {
+    width: 100%;
+}
+
+@media all and (max-width:1000px) and (min-width:400px) {
+
+    #nav {
+        margin-top: 0px;
+        /* border: 2px solid green; */
+        /* box-sizing: border-box; */
+        margin: auto;
+
+        /* height: 90px; */
+        position: sticky;
+        background-color: white;
+        top: 0;
+        /* width: 900px; */
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 70px;
+        width: 30%;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+    .secnav {
+        display: flex;
+        align-items: flex-end;
+        height: 70px;
+        /* position: fixed; */
+        /* margin-bottom: 100px; */
+        /* top: 20px; */
+
+        justify-content: space-between;
+    }
+
+
+
+    .secnav>img {
+
+        /* height: 150px; */
+        /*00px; */
+        margin-left: 50px;
+        width: 210px;
+
+
+        /* margin-bottom:0px; */
+
+
+
+
+    }
+
+    .fa-magnifying-glass {
+        position: relative;
+        /* left: -40px;
+        top: 10px; */
+        display: none;
+
+    }
+
+    form {
+        /* margin-left: 30px; */
+        /* height: 50px; */
+        display: none;
+    }
+
+    form>input:nth-child(1) {
+        width: 100%;
+        /* height: 30px; */
+
+    }
+
+    form>input:nth-child(2) {
+        /* height: 15px; */
+        margin-left: 0px;
+        border: 2px solid #84c225;
+        background-color: #84c225;
+
+    }
+
+    .basket>div {
+        width: 20px;
+        display: none;
+        background-color: #F2F2F2;
+
+    }
+
+    .off {
+        display: none;
+    }
+
+    .smartBasket {
+        display: grid;
+        gap: 10px;
+        /* text-align: center; */
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgb(54, 50, 50);
+
+    }
+
+    .sliding img {
+        width: 100%;
+    }
+
+    .arrow1,
+    .arrow2,
+    .arrowq,
+    .arroww {
+        display: none;
+    }
+
+    #ByCategory>select {
+        /* width: 285px; */
+        /* height: 37px; */
+        font-size: 17px;
+        text-decoration: line;
+        font-weight: 600;
+        color: white;
+        /* background-color: linear-gradiant(red, navy);
+         */
+        /* background-image: linear-gradient(gold, rgba(0, 0, 0, 0.924), rgb(23, 148, 23)); */
+        background-color: #84c225;
+        border: none;
+        /* margin-right: 99px; */
+        padding: 0px 92px 0px 0px;
+
+    }
+
+    .app {
+        /* display: flex;
+     */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        /* border: 2px solid red; */
+
+    }
+
+    .winter-pro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .provi-store {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .nour-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .home-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .clean-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        /* height: 50px; */
+        /* border: 2px solid red; */
+
+    }
+
+    .down img {
+        width: 100%;
+        /* background-color: 2px solid red; */
+    }
+
+
+
+    #dd {
+        width: 10px;
+        display: none;
+    }
 }

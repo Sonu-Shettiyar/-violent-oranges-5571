@@ -1,0 +1,13 @@
+#nav {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(135, 129, 129, 0.177);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#nav>img {
+    margin-bottom: 10px;
+}
