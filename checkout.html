@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout_delivery_address</title>
+    <link rel="shortcut icon" href="./bigmart.png">
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Poppins&family=Source+Sans+Pro:wght@300&family=Tinos&display=swap');
+
+        * {
+            font-family: 'IBM Plex Serif', serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            /* font-family: serif; */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <img src="./bigmart.png" alt="">
+        <h2>+91 83810 83498 </h2>
+    </div>
+    <div class="main">
+
+        <div class="delivery">
+            <h3><i class="fa-solid fa-location-dot"> </i> Delivery Address</h3>
+            <div>
+                <h2>Personal Details</h2>
+                <div class="personal">
+
+                    <div class="first">
+                        <p><span style="color: red;">*</span>Enter first name</p>
+                        <input type="text" id="First">
+                    </div>
+                    <div class="last">
+                        <p>Enter last name</p>
+                        <input type="text" id="Last">
+                    </div>
+
+                </div>
+            </div>
+            <!-- ----address details------ -->
+
+
+            <div>
+                <h2>Address Details </h2>
+                <div class="personal">
+
+                    <div class="first">
+                        <p><span style="color: red;">*</span>House No</p>
+                        <input type="text" id="House">
+                    </div>
+                    <div class="lasting">
+                        <p>Enter apartment name</p>
+                        <input type="text" id="apartment">
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="personal">
+
+                <div class="first">
+                    <p><span style="color: red;"></span>Enter street details</p>
+                    <input type="text" id="Street">
+                </div>
+                <div class="lasting">
+                    <p>Enter Landmark for easy delivery</p>
+                    <input type="text" id="Landmark">
+                </div>
+
+            </div>
+
+            <!-- pincode  --------------------------------------------------- -->
+
+            <div>
+                <div class="personal">
+
+                    <div class="first">
+                        <p> Enter city name</p>
+                        <input type="text" id="City">
+                    </div>
+                    <div class="last">
+                        <p><span style="color: red;">*</span>Area details</p>
+                        <input type="text" id="Area">
+                    </div>
+                    <div class="last">
+                        <p><span style="color: red;">*</span>Enter Pincode</p>
+                        <input type="text" id="Pincode">
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------dont cross delivery ------------------------>
+
+
+            <!-- -------------------------------------choose nick name---------- -->
+            <div id="nick">
+                <p>Choose nick name for this address</p>
+
+                <button>HOME</button>
+                <button>OFFICE</button>
+                <button>OTHER</button>
+
+            </div>
+            <div> <button id="Address">ADD ADDRESS</button>
+            </div>
+            <img src="./Down-checkout.png" alt="" id="checkdown">
+        </div>
+
+        <!-- ------------------------------------------ -->
+        <div class="voucher">
+            <h2>Apply Voucher</h2>
+            <div>
+                <form action="" id="form">
+                    <input type="text" id="Couponcode">
+                    <input type="submit" value="Apply" id="Apply">
+                </form>
+                <img src="./coupon.png" alt="" id="Cimg">
+            </div>
+
+            <!-- ------------------------------------------ -->
+
+            <h2>Order Summary</h2>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Basket Value</td>
+                            <td>Rs <Span id="val">0</Span></td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Charge</td>
+                            <td><span id="free" style="color: rgb(31, 225, 31); font-weight: 700;">Free</span></td>
+                        </tr>
+                        <tr>
+                            <td>Coupon</td>
+                            <td><span id="AC" style="color: rgba(225, 83, 31, 0.467); font-weight: 700;">none</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="line">
+                                <hr>
+                                <h3>Total Amount Payable</h3>
+                            </td>
+                            <td><span id="tot"></span></td>
+                        </tr>
+                        <tr>
+                            <!-- <select name="" id="savings">
+                                Total savings
+                            </select> -->
+                            <p style="font-size: 11px;">*Free Delivery on the Purchase of 499rs or above</p>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button id="proceed">Proceed to Payment</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="./checkout.js"></script>
+
+</html>

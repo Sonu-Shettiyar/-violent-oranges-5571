@@ -274,9 +274,26 @@ let clean = document.querySelector(".clean-card");
 
 displaySix(cleaning, clean)
 
+// =----------------------------------------------------------------------------------------------login name------------------------
 
+// let log = document.querySelector("#log");
 
+let log = document.querySelector("#log");
 
+let nme = localStorage.getItem("name");
+
+log.innerText = nme;
+let out = document.querySelector("#out");
+out.innerText = "Logout"
+
+out.addEventListener("click", function () {
+    log.innerText = "Lgin/SignUp";
+    setTimeout(() => {
+
+        window.location.href = "./login.html"
+    }, 2000)
+
+})
 
 
 

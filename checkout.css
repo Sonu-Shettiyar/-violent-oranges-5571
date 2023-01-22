@@ -1,0 +1,176 @@
+.personal {
+    display: flex;
+}
+
+#contact {
+
+    display: flex;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(135, 129, 129, 0.177);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#nav>img {
+    margin-bottom: 10px;
+}
+
+.main {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+
+
+}
+
+.delivery {
+    width: 65%;
+    display: grid;
+    border: 1px solid rgba(93, 87, 87, 0.264);
+
+    font-size: 20px;
+    color: rgb(92, 89, 89);
+    /* grid-template-columns: repeat(3, 100px); */
+    padding: 10px;
+}
+
+.delivery p {
+    color: gray;
+}
+
+.delivery input {
+    height: 23px;
+    border: 1px solid rgba(0, 0, 0, 0.132);
+}
+
+.delivery>div {
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+
+.delivery>div>h2 {
+    font-size: 18px;
+
+}
+
+.first {
+    margin-right: 30px;
+}
+
+.last {
+    margin-right: 20px;
+}
+
+#last,
+#street,
+#last {
+    width: 370px;
+}
+
+.delivery p {
+    font-size: 16px;
+}
+
+#nick>button {
+    border-radius: 3px;
+
+    border: 1px solid rgba(128, 128, 128, 0.21);
+
+    background-color: #F5F5F5;
+    padding: 5px;
+    color: grey;
+}
+
+#checkdown {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#Address {
+    border: none;
+    padding: 12px;
+    border-radius: 3px;
+
+    background-color: #666666;
+    color: #F5F5F5;
+}
+
+.voucher {
+    /* position: sticky; */
+    /* top: 0; */
+    width: 32%;
+    /* border: 3px solid hotpink; */
+    /* margin-left: 10px; */
+}
+
+.voucher>div {
+    background-color: #F7F7F7;
+    margin: auto;
+    /* text-align: center; */
+
+    padding: 20px;
+    width: 80%;
+}
+
+.voucher input {
+    height: 26px;
+    border: 1px solid rgba(128, 128, 128, 0.44);
+}
+
+.voucher form input:nth-child(1) {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.voucher img {
+    width: 100%;
+}
+
+.voucher h2 {
+    font-size: 23px;
+    position: relative;
+    left: 20px;
+}
+
+#Apply {
+    background-color: #F9F9F9;
+    border: 1px solid rgba(128, 128, 128, 0.314);
+    padding: 5px;
+    width: 70px;
+    height: 32px;
+    /* padding-bottom: 10px; */
+}
+
+td {
+    margin-bottom: 50px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border: 2px solid rgba(141, 141, 141, 0.1);
+    background-color: #ffffff;
+}
+
+#proceed {
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+
+
+    border-radius: 18px;
+    background-image: linear-gradient(to right, rgb(253, 252, 252), rgb(212, 212, 212));
+    border: 1px solid rgba(128, 128, 128, 0.111);
+}
