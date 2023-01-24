@@ -13,48 +13,70 @@ To Preview My actual Site You can simply **click below on the link** 👇👇
                  
   And here are some Snapshots of My Site you Can have a look ✅
 -SignUp page
-![Screenshot (515)](https://user-images.githubusercontent.com/119413823/214003319-2a6d773d-5b26-4fc3-b04b-425b93f8b022.png)
+![signup](https://user-images.githubusercontent.com/119413823/214203826-1b124da7-f255-4a7b-88ea-b5eabf5a2556.png)
 
 -Login Page
-![Screenshot (514)](https://user-images.githubusercontent.com/119413823/214003497-4a22d256-2f76-452d-8570-ae43ef18b224.png)
+![login](https://user-images.githubusercontent.com/119413823/214203829-9651546d-6467-42ac-91fe-5458fb9cf7e4.png)
 
 -Landing Page
 
-![Screenshot (501)](https://user-images.githubusercontent.com/119413823/214003583-5c04c142-6871-4064-93a7-d8ed96a2d992.png)
+![LAanding page](https://user-images.githubusercontent.com/119413823/214203804-da805304-bef0-4566-a3d2-cb4de4d82906.png)
+
 
 
 - Sliding product Cards
-
-![Screenshot (502)](https://user-images.githubusercontent.com/119413823/214003779-0818948d-0f60-4a79-ada5-91072a3ea689.png)
+![Card-transitiom](https://user-images.githubusercontent.com/119413823/214203887-16430f77-1da3-4ebb-b2f0-8182c7ce2b6b.png)
 
 
 - BAckground Logo
-![Screenshot (503)](https://user-images.githubusercontent.com/119413823/214003905-0a5f8fb7-b377-407b-8e31-1568c76f5afc.png)
+![BAckground logo footer](https://user-images.githubusercontent.com/119413823/214203881-89f71e6b-2b61-4b3e-a131-fd4cda
 
 
 -Some transition applied on Card(card color changing to yellow)
-![Screenshot (505)](https://user-images.githubusercontent.com/119413823/214003962-f1c7ba0d-6980-4561-91f0-8edad35de1b3.png)
+![Card-transitiom](https://user-images.githubusercontent.com/119413823/214203887-16430f77-1da3-4ebb-b2f0-8182c7ce2b6b.png)
+6ca768.png)
 
 
 -Filtering Part
-![Screenshot (507)](https://user-images.githubusercontent.com/119413823/214004230-5de9a802-3648-40c5-a5e1-1eee3b955330.png)
+![SHop  by Category](https://user-images.githubusercontent.com/119413823/214203864-d44a4e1f-f975-44b2-9fd7-d1d601390843.png)
+
 
 
 -Sorting Function
-![Screenshot (508)](https://user-images.githubusercontent.com/119413823/214004313-91e66787-1be9-4148-9b99-d53c7144155d.png)
+![Sorting things](https://user-images.githubusercontent.com/119413823/214203854-c192fd25-8b63-458c-9c6a-6598344c3595.png)
+
+-Search function 
+![SEArch things](https://user-images.githubusercontent.com/119413823/214204552-65774ca9-3be0-47f0-8559-7a040b6220d1.png)
+
 
 -Adding to Cart confirmation
 ![Screenshot (509)](https://user-images.githubusercontent.com/119413823/214004535-56d5382a-8fee-4155-9116-ac517fe797c5.png)
 
 -Cart PAge with Price Description
-![Screenshot (511)](https://user-images.githubusercontent.com/119413823/214004657-f0c706e7-98bc-480e-84f9-08df0b512cac.png)
+![-CArt item Description](https://user-images.githubusercontent.com/119413823/214203867-3234cdfa-69be-4401-8eca-ba0d132b66de.png)
+ages.githubusercontent.com/119413823/214203851-0fea3664-d467-4d0d-83fe-cb68222f0fbd.png)
+ng)
+
+-If address is not provided
+
+![If address is not provide](https://user-images.githubusercontent.com/119413823/214203844-140b68c6-e582-48a8-9146-6a13811a1e63.png)
+
+-Form Validation
+![Form Validation](https://user-images.githubusercontent.com/119413823/214203839-c9a16bc2-1957-44ba-9f1d-5871501b8812.p
 
 -Adding Coupon/Voucher
-![Screenshot (513)](https://user-images.githubusercontent.com/119413823/214004775-24d33ddc-ee19-4705-be59-d84325027f41.png)
+![Screenshot (531)](https://user-images.githubusercontent.com/119413823/214204468-1abc0319-d841-4d00-9b7e-2a2ae1ee88aa.png)
 
 
 
-____________________________________Thank you For Visiting______________________________________
+-Payment Succesfull
+
+![payment succesfull](https://user-images.githubusercontent.com/119413823/214203837-24c580c3-232b-46b0-8087-37952b39863e.png)
+
+
+
+
+               ____________________Thank you For Visiting_________________________
 
 
       
