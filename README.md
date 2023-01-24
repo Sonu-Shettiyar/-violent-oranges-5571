@@ -50,7 +50,10 @@ To Preview My actual Site You can simply **click below on the link** 👇👇
 
 
 -Adding to Cart confirmation
-![Screenshot (509)](https://user-images.githubusercontent.com/119413823/214004535-56d5382a-8fee-4155-9116-ac517fe797c5.png)
+![Screenshot (532)](https://user-images.githubusercontent.com/119413823/214205134-32f97d7c-1385-414c-8230-c7f92396262b.png)
+ -Alert Notification for adding the same things
+ ![Screenshot (533)](https://user-images.githubusercontent.com/119413823/214205104-0601630e-c3ec-4674-b24d-ea700d68dc32.png)
+
 
 -Cart PAge with Price Description
 ![-CArt item Description](https://user-images.githubusercontent.com/119413823/214203867-3234cdfa-69be-4401-8eca-ba0d132b66de.png)
